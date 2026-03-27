@@ -1,17 +1,36 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Portfolio Test Suite" parallel="tests" thread-count="2">
 
+    <!-- Chrome: all tests including Chrome-only ones -->
     <test name="Chrome Tests">
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.qa.tests.LoginTest" />
+            <class name="com.qa.tests.AssertionsDemoTest" />
+            <class name="com.qa.tests.BrokenLinksTest" />
+            <class name="com.qa.tests.BrokenImagesTest" />
+            <class name="com.qa.tests.DependentTests" />
+            <class name="com.qa.tests.ListenerDemoTest" />
+            <class name="com.qa.tests.KendoDateTimePickerTest" />
+            <class name="com.qa.tests.LoginTestWithProperties" />
         </classes>
     </test>
 
+    <!-- Firefox: parallel-safe tests only -->
     <test name="Firefox Tests">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.qa.tests.LoginTest" />
+            <class name="com.qa.tests.AssertionsDemoTest" />
+            <class name="com.qa.tests.BrokenLinksTest" />
+            <class name="com.qa.tests.BrokenImagesTest" />
+        </classes>
+    </test>
+
+    <!-- No browser needed -->
+    <test name="Utility Tests">
+        <classes>
+            <class name="com.qa.tests.PDFTextExtractTest" />
         </classes>
     </test>
 
