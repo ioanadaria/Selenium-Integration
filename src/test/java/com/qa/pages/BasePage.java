@@ -23,10 +23,12 @@ public class BasePage {
     }
 
     protected void waitForVisible(WebElement element) {
+        if (element == null) throw new IllegalArgumentException("Element must not be null");
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     protected void waitForClickable(WebElement element) {
+        if (element == null) throw new IllegalArgumentException("Element must not be null");
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 }
