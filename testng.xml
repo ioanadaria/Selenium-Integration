@@ -13,6 +13,10 @@
             <class name="com.qa.tests.ListenerDemoTest" />
             <class name="com.qa.tests.KendoDateTimePickerTest" />
             <class name="com.qa.tests.LoginTestWithProperties" />
+            <class name="com.qa.tests.WaitsTest" />
+            <class name="com.qa.tests.ScrollTest" />
+            <class name="com.qa.tests.ResizeElementTest" />
+            <class name="com.qa.tests.SSLCertificatesTest" />
         </classes>
     </test>
 
@@ -24,6 +28,17 @@
             <class name="com.qa.tests.AssertionsDemoTest" />
             <class name="com.qa.tests.BrokenLinksTest" />
             <class name="com.qa.tests.BrokenImagesTest" />
+            <class name="com.qa.tests.WaitsTest" />
+            <class name="com.qa.tests.ScrollTest" />
+            <class name="com.qa.tests.ResizeElementTest" />
+            <class name="com.qa.tests.SSLCertificatesTest" />
+        </classes>
+    </test>
+
+    <!-- Firefox with custom profile — manages its own driver, no browser parameter needed -->
+    <test name="Firefox Auth Tests">
+        <classes>
+            <class name="com.qa.tests.WindowsAuthTest" />
         </classes>
     </test>
 
